@@ -1,4 +1,4 @@
-mock = {
+export const mockBudget = {
     "monthly" : {
         "income": [
             {
