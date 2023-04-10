@@ -1,7 +1,11 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '@/styles/Home.module.css'
+import dynamic from 'next/dynamic'
 
+const BudgetRow = dynamic(() => import('../components/budget/row'), {
+  loading: () => <p>Loading...</p>,
+})
 
 export default function Home() {
   return (
@@ -31,6 +35,7 @@ export default function Home() {
                     </tr>    
                 </thead>
                 <tbody>
+                  <BudgetRow />
                 </tbody>
             </table>                
         </section>
